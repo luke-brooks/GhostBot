@@ -1,0 +1,11 @@
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\GhostBotApp.exe.config
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\GhostBotApp.exe
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\GhostBotApp.pdb
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\obj\Debug\GhostBotApp.exe
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\obj\Debug\GhostBotApp.pdb
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\obj\Debug\GhostBotApp.GhostBotGui.resources
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\obj\Debug\GhostBotApp.csproj.GenerateResource.Cache
+C:\Users\PL21288\Documents\Visual Studio 2013\Projects\GhostBotApp\GhostBotApp\obj\Debug\GhostBotApp.ConfigForm.resources

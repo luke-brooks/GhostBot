@@ -1,0 +1,66 @@
+GhostBot App User Guide
+	About
+		The GhostBot Application was designed to send a message to a Slack Channel when a Skype IM is received and keep a user's computer from auto-locking due to inactivity. 
+		GhostBot will periodically take a screenshot of the user's Primary Monitor and scan it to see if the Skype IM icon is indicating that an IM was received; it will also force a slight mouse movement to prevent auto-locking.
+		If GhostBot determines that an IM was received, it then sends a message to the SlackAPI, using a user configured Slack Channel URL, to let the user know that Skype messages were received.
+		
+	Setup
+		Installation
+			GhostBot does not have a formal installer to avoid any permissions restrictions that are typically needed to install new applications on a computer.
+			To start GhostBot's setup, simply choose a folder directory on your computer's C: drive to save and unzip the GhostBotApp.zip file.
+			Once the files have been unzipped from GhostBotApp.zip, right click the GhostBotApp.exe file and select "Create shortcut".
+			Move the newly created Shortcut file to your "Startup" folder (typically at C:\Users\{your username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup).
+				This will allow GhostBot to startup automatically whenever you log onto your computer.
+				
+		Using GhostBot
+			Once GhostBot is running, an icon will appear in the Taskbar near the Date and Time. Sometimes it can be found in the "Hidden icons" section.
+			The icon will appear as a Shield with the Windows logo colors. Hovering your mouse over the icon will show a tooltip that says "GhostBot".
+			Right click the icon to show GhostBot's function menu; the options "Start", "Configure", and "Exit" will be displayed.
+				"Start" will tell GhostBot to start the periodic screen scan to check for received IMs.
+					Once GhostBot has been "Started", "Start" will be replaced with "Pause" on the function menu.
+				"Pause" will tell GhostBot to stop its continuous scan for received IMs.
+				"Configure" will open the GhostBot Configuration menu. See the Configuration section of the User Guide for more details. This option is only available when GhostBot is Paused.
+				"Exit" will fully close the GhostBot application. To start GhostBot again, you will need to run the GhostBot.exe or double click your GhostBot Shortcut.
+			!! Be sure to change the Slack Channel URL in the Configuration section to your own Slack Channel. If you do not update the URL, then your Slack Channel will not get messages from GhostBot.
+			
+		Configuration
+			The GhostBot Configuration menu can be opened by right clicking the GhostBot tray icon and selecting "Configure".
+			"Resource Location" allows the user to choose what specific directory they want to use to hold their Bitmaps of Skype icons for determining when an IM is received.
+				Single and Multi Screen subfolders are displayed to show the user what the folder structure will look like.
+				If a folder, single, multi, or otherwise, is selected and does NOT exist, GhostBot will atuomatically create the selected directory.
+				Resource Location is defaulted to the directory that the GhostBotApp.exe file is saved in.
+			"Start Menu Location" allows the user to specify how their Start Menu and Taskbar are oriented on their Primary Screen
+				This function improves the processing speed of GhostBot when it is analyzing a screenshot.
+				Start Menu Location is defaulted to "Bottom".
+			"Slack URL Info" is where the Slack URL and Slack Channel extended URL are saved.
+				"Slack Channel" MUST BE UPDATED TO YOUR OWN SLACK CHANNEL URL FOR YOU TO RECEIVE MESSAGE FROM GHOSTBOT.
+					For creating your own Slack Channel URL, please talk to Google.
+				"Slack Channel" is defaulted to ChairmanMeow's URL. To change the default, see the "Changing App Default Values" section of the User Guide.
+				
+			Changing App Default Values
+				The default Configuration values are stored in the GhostBotApp.exe.config file: to edit them, right click this file and open it with Notepad.
+					"appSettings" holds the key-value pairs of default configuration data.
+						!! When updating data in "appSettings" be sure to only edit the "value" section and NOT the "key" section.
+		
+	Adding Bitmaps for Scan
+		Numbered screenshots are included in this User Guide folder. Here is the walkthrough, pic by pic:
+			1. Take a screenshot ("Print Screen" button) when you have a received IM in Skype. Be sure to wait until the icon has completely stopped flashing before you take your screenshot.
+			2. Open the "Paint" program and paste your screenshot into the work area.
+			3. Find the Skype icon and use the "Select" tool to highlight a small portion of the Skype icon. Be sure to get at least part of the yellow "received IM" section of the icon.
+			4. Use the "Crop" tool to remove the unnecessary part of the screenshot.
+			5. Select "Save as" to save your Skype icon section as a Bitmap.
+			6. Be sure to set the "Save as type:" value to 24-bit Bitmp (*.bmp) and save it in GhostBot's Resources folders.
+	
+	Common Issues
+		Not Recognizing Recieved IM
+			The app can only recognize the exact provided Bitmap that is placed in the Resources folders. Keep in mind that making any changes to the Personalization settings in Windows 7 can prevent GhostBot from recognizing a received IM. Changes to Windows 7 settings may require a new Bitmap of the received IM icon to be added to the Resources folders. These settings changes include but are not limited to:
+				Changing the Desktop Background
+				Changing the Window Color
+				Changing the Window Transparency
+				Changing the Primary Monitor
+				Changing the Resolution on any monitors
+				Changing the location of the IM icon on your Taskbar
+		
+		Double Scan
+			When the app is Started and Paused repeatedly in a short amount of time, this can cause the app to double scan and potentially send multiple messages for the same occurrance. Exiting and restarting the app can resolve this issue quickly.
+		
